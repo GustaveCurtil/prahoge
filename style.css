@@ -1,0 +1,94 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --breedteTitel: 400px;
+    --logoHoogte: 50px;
+    --tussenruimte: 40px;
+    --fotoHoogte:100px
+}
+
+body {
+    height: 100svh;
+    width: 100vw;
+
+    padding: var(--tussenruimte);
+
+    display: grid;
+    grid-template-columns: calc(2.8 * var(--breedteTitel)) 2fr;
+    grid-template-rows: var(--logoHoogte) 100px 500px 0.5fr;
+    grid-template-areas:
+    "header ."
+    "aside welkom"
+    "foto main"
+    "footer footer";
+    gap: var(--tussenruimte);
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header>h1 {
+    text-align: right;
+    color: #ED1B24;
+    font-weight: 500;
+}
+
+header>img{
+    max-width: calc(100%/5);
+    max-height: var(--logoHoogte);
+}
+
+header>p {
+    width: var(--breedteTitel);
+    font-size: 1.3rem;
+    line-height: 1.3;
+    font-weight: 300;
+}
+
+header>p>b{
+    color: #ED1B24;
+    font-weight: 600;
+}
+
+aside {
+    grid-area: aside;
+    background-color: cadetblue;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(175, 108, 108);
+}
+
+footer {
+    grid-area: footer;
+    background-color: tomato;
+}
+
+.welkom {
+    grid-area: welkom;
+    background-color: rgb(79, 225, 176);
+}
+
+#foto {
+    grid-area: foto;
+    width: 100%;
+    height: var(--fotoHoogte);
+    object-fit: cover;
+}
