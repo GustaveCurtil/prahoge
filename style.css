@@ -136,6 +136,14 @@ main {
     gap: auto;
 }
 
+.visie > *, .betekenen> *, .opleidingen> * {
+    padding-bottom: 10px;
+}
+
+.visie > :last-child, .betekenen> :last-child, .opleidingen> :last-child {
+    padding-bottom: 0px;
+}
+
 .visie {
     grid-area: visie;
 }
@@ -148,9 +156,14 @@ main {
     grid-area: opleidingen;
 }
 
+.samenwerken {
+    display: none;
+    grid-area: samenwerken;
+}
+
 ul {
     list-style-position: outside;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .vet {
