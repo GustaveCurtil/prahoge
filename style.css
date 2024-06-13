@@ -9,12 +9,15 @@
     --breedteTitel: 400px;
     --logoHoogte: 50px;
     --tussenruimte: 2.5vw;
-    --fotoHoogte:100px
+    --fotoHoogte:100px;
+    --thema-rood:#ED1B24;
 }
 
 body {
     height: 100svh;
     width: 100vw;
+
+    font-size: 0.8vw;
 
     padding: var(--tussenruimte);
 
@@ -45,7 +48,7 @@ header {
 header>h1 {
     font-size: 1.8vw;
     text-align: right;
-    color: #ED1B24;
+    color: var(--thema-rood);
     font-weight: 500;
 }
 
@@ -62,7 +65,7 @@ header>p {
 }
 
 header>p>b{
-    color: #ED1B24;
+    color: var(--thema-rood);
     font-weight: 700;
 }
 
@@ -72,12 +75,7 @@ aside {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: dotted 2px #ED1B24;
-}
-
-main {
-    grid-area: main;
-    background-color: rgb(175, 108, 108);
+    border: dotted 2px var(--thema-rood);
 }
 
 footer {
@@ -86,9 +84,12 @@ footer {
     justify-content: space-between;
 }
 
+h2 {
+    color: var(--thema-rood);
+}
+
 .welkom {
     grid-area: welkom;
-    background-color: rgb(79, 225, 176);
 }
 
 #foto {
@@ -96,4 +97,38 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+main { 
+    grid-area: main;
+    /* background-color: beige; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto min-content;
+    grid-template-areas:
+    "visie visie"
+    "betekenen opleidingen";
+    gap: auto;
+}
+
+.visie {
+    grid-area: visie;
+}
+
+.betekenen {
+    grid-area: betekenen;
+}
+
+.opleidingen {
+    grid-area: opleidingen;
+}
+
+ul {
+    list-style-position: outside;
+    padding: 20px;
+}
+
+.vet {
+    font-weight: 500;
 }
