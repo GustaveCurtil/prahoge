@@ -13,6 +13,18 @@
     --thema-rood:#ED1B24;
 }
 
+@media screen and (max-height: 55vw) {
+    :root {
+        --breedteTitel: 350px;
+        --logoHoogte: 40px;
+        --tussenruimte: 2vw;
+    }
+
+    body {
+        background-color: #ED1B24;
+    }
+}
+
 body {
     height: 100svh;
     width: 100vw;
@@ -33,11 +45,6 @@ body {
     gap: var(--tussenruimte);
 }
 
-@media screen and (max-height: 40vw) {
-    body {
-        background-color: #ED1B24;
-    }
-}
 
 header {
     grid-area: header;
