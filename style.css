@@ -14,17 +14,12 @@
     --thema-rood:#ED1B24;
 }
 
-@media screen and (max-height: 49vw) {
+@media screen and (max-width: 1600px) {
     :root {
-        --breedteTitel: 350px;
+        /* --breedteTitel: 350px;
         --logoHoogte: 40px;
         --tussenruimte: 2vw;
-        --hoogteVisitekaart: 80px;
-    }
-
-    body {
-        background-color: #ed1b2675;
-        font-size: 14px;
+        --hoogteVisitekaart: 80px; */
     }
 }
 
@@ -48,6 +43,33 @@ body {
     gap: var(--tussenruimte);
 }
 
+h2 {
+    color: var(--thema-rood);
+    font-size: 22px;
+}
+
+.welkom {
+    grid-area: welkom;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1600px) {
+    body {
+        background-color: #61ed1b75;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .welkom {
+        font-size: 18px;
+    }
+}
 
 header {
     grid-area: header;
@@ -101,11 +123,6 @@ footer {
     justify-content: space-between;
 }
 
-h2 {
-    color: var(--thema-rood);
-    font-size: 22px;
-}
-
 .afspraak {
     grid-area: afspraak;
     display: flex;
@@ -122,12 +139,6 @@ h2 {
     font-weight: 500;
 }
 
-.welkom {
-    grid-area: welkom;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-}
 
 
 
