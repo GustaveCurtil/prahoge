@@ -10,11 +10,11 @@
     --logoHoogte: 50px;
     --tussenruimte: 2.5vw;
     --fotoHoogte:100px;
-    --hoogteVisitekaart: 100px;
+    --hoogteVisitekaart: 80px;
     --thema-rood:#ED1B24;
 }
 
-@media screen and (max-height: 55vw) {
+@media screen and (max-height: 49vw) {
     :root {
         --breedteTitel: 350px;
         --logoHoogte: 40px;
@@ -24,6 +24,7 @@
 
     body {
         background-color: #ed1b2675;
+        font-size: 14px;
     }
 }
 
