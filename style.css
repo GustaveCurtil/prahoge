@@ -33,6 +33,12 @@ body {
     gap: var(--tussenruimte);
 }
 
+@media screen and (max-height: 40vw) {
+    body {
+        background-color: #ED1B24;
+    }
+}
+
 header {
     grid-area: header;
     display: flex;
