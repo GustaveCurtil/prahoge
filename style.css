@@ -10,6 +10,7 @@
     --logoHoogte: 50px;
     --tussenruimte: 2.5vw;
     --fotoHoogte:100px;
+    --hoogteVisitekaart: 100px;
     --thema-rood:#ED1B24;
 }
 
@@ -18,6 +19,7 @@
         --breedteTitel: 350px;
         --logoHoogte: 40px;
         --tussenruimte: 2vw;
+        --hoogteVisitekaart: 80px;
     }
 
     body {
@@ -36,7 +38,7 @@ body {
 
     display: grid;
     grid-template-columns: calc(2.8 * var(--breedteTitel)) 2fr;
-    grid-template-rows: var(--logoHoogte) 100px calc(100svh - 100px - var(--logoHoogte) - (5 * var(--tussenruimte)) - 20px) 20px;
+    grid-template-rows: var(--logoHoogte) var(--hoogteVisitekaart) calc(100svh - var(--hoogteVisitekaart) - var(--logoHoogte) - (5 * var(--tussenruimte)) - 20px) 20px;
     grid-template-areas:
     "header afspraak"
     "aside welkom"
