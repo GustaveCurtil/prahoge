@@ -19,7 +19,7 @@
         --breedteTitel: 350px;
         --logoHoogte: 40px;
         --tussenruimte: 2vw;
-        --hoogteVisitekaart: 80px;
+        --hoogteVisitekaart: 60px;
     }
 }
 
@@ -184,7 +184,7 @@ ul {
 
 @media screen and (max-width: 1600px) {
     body {
-        background-color: #61ed1b75;
+        background-color: #1b95ed75;
         font-size: 15px;
     }
 
