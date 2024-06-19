@@ -12,6 +12,7 @@
     --fotoHoogte:100px;
     --hoogteVisitekaart: 80px;
     --thema-rood:#ED1B24;
+    --thema-wit: #FFFBF9;
 }
 
 @media screen and (max-width: 1600px) {
@@ -26,18 +27,28 @@
 body {
     height: 100svh;
     width: 100vw;
+    
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: var(--thema-wit);
+}
 
-    font-size: 16px;
+.pagewrapper {
+    height: 100svh;
+    width: 1600px;
+
+    font-size: 17px;
     font-weight: 300;
 
-    padding: var(--tussenruimte);
+    padding: var(--tussenruimte) calc(2 * var(--tussenruimte));
 
     display: grid;
     grid-template-columns: calc(2.8 * var(--breedteTitel)) 2fr;
-    grid-template-rows: var(--logoHoogte) var(--hoogteVisitekaart) calc(100svh - var(--hoogteVisitekaart) - var(--logoHoogte) - (5 * var(--tussenruimte)) - 20px) 20px;
+    grid-template-rows: var(--logoHoogte) var(--hoogteVisitekaart) calc(100svh - var(--hoogteVisitekaart) - var(--logoHoogte) - (5 * var(--tussenruimte)) - 16px) 16px;
     grid-template-areas:
     "header afspraak"
-    "aside welkom"
+    "aside main"
     "foto main"
     "footer footer";
     gap: var(--tussenruimte);
@@ -117,7 +128,7 @@ footer {
 
 .afspraak button {
     background-color: var(--thema-rood);
-    color: white;
+    color: var(--thema-wit);
     border: none;
     padding: 5px 10px;
     font-size: 20px;
@@ -138,14 +149,14 @@ footer {
 main { 
     grid-area: main;
     /* background-color: beige; */
-
+    overflow-y: auto;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 4fr 3fr;
     grid-template-rows: auto min-content;
     grid-template-areas:
     "visie visie"
     "betekenen opleidingen";
-    gap: var(--tussenruimte);
+    gap: calc(var(--tussenruimte) / 2);
 }
 
 .visie > *, .betekenen> *, .opleidingen> * {
@@ -158,14 +169,17 @@ main {
 
 .visie {
     grid-area: visie;
+    font-size: 18px;
 }
 
 .betekenen {
     grid-area: betekenen;
+        font-size: 16px;
 }
 
 .opleidingen {
     grid-area: opleidingen;
+    font-size: 16px;
 }
 
 .samenwerken {
